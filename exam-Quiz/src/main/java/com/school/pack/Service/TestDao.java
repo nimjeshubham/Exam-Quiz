@@ -18,6 +18,10 @@ public class TestDao {
 		return repo.save(t);
 	}
 	
+	public List<Test> insertAll(List<Test> test){
+		return repo.saveAll(test);
+	}
+	
 	public List< Test> getAll(){
 		return repo.findAll();
 	}
@@ -33,8 +37,9 @@ public class TestDao {
 		return repo.save(tt);
 	}
 	
-	public void delete(Integer id) {
+	public String delete(Integer id) {
 		repo.deleteById(id);
+		return "deleted the id value "+id;
 	}
 
 }
