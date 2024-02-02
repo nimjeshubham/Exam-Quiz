@@ -16,6 +16,7 @@
 	<description>School management system web application is for schools which want online operations. Concepts used- Architecture: Microservices (two part -School Management Admin and School Management User), Spring MVC, Spring Boot, Spring Data JPA, Hibernate. Tools- IDE: STS, database: MySQL, Online repository: GitHub, CI/CD pipeline: Jenkins deploy on tomcat 9.</description>
 	<properties>
 		<java.version>17</java.version>
+		 <spring-cloud.version>2023.0.0</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -58,9 +59,25 @@
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
         
 		
 	</dependencies>
+	
+	<dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 	<build>
 		<plugins>
