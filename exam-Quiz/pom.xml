@@ -11,7 +11,7 @@
 	<groupId>com.school</groupId>
 	<artifactId>Exam</artifactId>
 	<version>0.1</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>exam-Quiz</name>
 	<description>School management system web application is for schools which want online operations. Concepts used- Architecture: Microservices (two part -School Management Admin and School Management User), Spring MVC, Spring Boot, Spring Data JPA, Hibernate. Tools- IDE: STS, database: MySQL, Online repository: GitHub, CI/CD pipeline: Jenkins deploy on tomcat 9.</description>
 	<properties>
@@ -63,6 +63,12 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-openfeign</artifactId>
     </dependency>
+    <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    
+    </dependency>
+    
         
 		
 	</dependencies>
