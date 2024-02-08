@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.school.pack.Model.Question;
 
-@FeignClient(url = "http://localhost:9090" , value = "questionClient")
+//@FeignClient(url = "http://localhost:9090" , value = "questionClient")
+@FeignClient(name ="QUESTION-SERVICE")
 public interface QuestionClient {
 	
 	
